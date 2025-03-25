@@ -111,6 +111,12 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 
+@media (max-width: 500px) {
+  .navmenu ul {
+    flex-direction: column;
+  }
+}
+
 .navmenu {
   padding: 0;
 }
@@ -191,7 +197,7 @@ h6 {
   display: block;
   position: absolute;
   visibility: hidden;
-  left: 14px;
+  left: -100px;
   top: 130%;
   opacity: 0;
   transition: 0.3s;
