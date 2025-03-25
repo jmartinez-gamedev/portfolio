@@ -255,7 +255,12 @@ h6 {
   .header .logo h1 {
     font-size: 24px;
   }
-
+  
+  .navmenu .dropdown .dropdown:hover>ul {
+    top: 100%;
+    left: -40%;
+  }
+  
 }
 
 /*--------------------------------------------------------------
