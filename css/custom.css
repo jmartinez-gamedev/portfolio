@@ -111,12 +111,6 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 
-@media (max-width: 500px) {
-  .navmenu ul {
-    flex-direction: column;
-  }
-}
-
 .navmenu {
   padding: 0;
 }
@@ -244,6 +238,24 @@ h6 {
   top: 0;
   left: -100%;
   visibility: visible;
+}
+
+
+/* Small navbar for mobile */
+@media (max-width: 740px) {
+
+  .navmenu ul {
+    flex-wrap: wrap;
+  }
+
+  .navmenu>ul>li {
+    padding: 4px 4px;
+  }
+
+  .header .logo h1 {
+    font-size: 24px;
+  }
+
 }
 
 /*--------------------------------------------------------------
