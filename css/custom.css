@@ -73,6 +73,15 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.w-80 {
+  width: 80%;
+}
+
+.w-66 {
+  width: 66%;
+}
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -107,6 +116,18 @@ h6 {
   color: var(--accent-color);
 }
 
+.header .social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--nav-color);
+  stroke: none;
+}
+
+
+.header .social-icon:hover {
+  fill: var(--accent-color);
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -127,6 +148,21 @@ h6 {
   position: relative;
 }
 
+.navmenu .sub {
+  color: #97979786;
+  font-size: 14px;
+  padding: 5px 0px 0px 25px;
+  font-family: var(--nav-font);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+  font-style: italic;
+}
+
 .navmenu>ul>li {
   white-space: nowrap;
   padding: 15px 14px;
@@ -145,7 +181,7 @@ h6 {
   font-weight: 400;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
@@ -191,7 +227,7 @@ h6 {
   display: block;
   position: absolute;
   visibility: hidden;
-  left: -100px;
+  left: -120px;
   top: 130%;
   opacity: 0;
   transition: 0.3s;
@@ -202,6 +238,7 @@ h6 {
 
 .navmenu .dropdown ul li {
   min-width: 200px;
+  max-width: 200px;
 }
 
 .navmenu .dropdown ul a {
@@ -235,14 +272,13 @@ h6 {
 
 .navmenu .dropdown .dropdown:hover>ul {
   opacity: 1;
-  top: 0;
-  left: -100%;
+  top: -25px;
+  left: -90%;
   visibility: visible;
 }
 
-
 /* Small navbar for mobile */
-@media (max-width: 740px) {
+@media (max-width: 760px) {
 
   .navmenu ul {
     flex-wrap: wrap;
@@ -255,12 +291,11 @@ h6 {
   .header .logo h1 {
     font-size: 24px;
   }
-  
+
   .navmenu .dropdown .dropdown:hover>ul {
     top: 100%;
     left: -40%;
   }
-  
 }
 
 /*--------------------------------------------------------------
@@ -332,6 +367,22 @@ section,
   margin-bottom: 0;
 }
 
+.section-subtitle {
+  text-align: center;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.section-subtitle h4 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.section-subtitle p {
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -386,8 +437,7 @@ section,
   overflow: hidden;
 }
 
-.portfolio.portfolio-item h3 {
-
+.portfolio .portfolio-item h3 {
   font-size: 32px;
 }
 
@@ -465,6 +515,99 @@ section,
   line-height: 0;
 }
 
+.photo {
+  max-height: 400px;
+}
+
+.showcase h1 {
+  margin-top: 5px;
+  margin-bottom: -5px;
+  font-size: 40px;
+}
+
+.showcase p {
+  margin-top: -5px;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.showcase svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: 3px solid color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+
+.showcase svg.stroke {
+  fill: none;
+  stroke: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.showcase svg.fill {
+  fill: color-mix(in srgb, var(--default-color), transparent 50%);
+  stroke: none;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.about h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.abouthero {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background-color: #00000033;
+  padding: 0px;
+}
+
+.underabouthero
+{
+  background-color: #0000007a;
+  padding: 0px;
+}
+
+.abouthero a {
+  font-size: 20px;
+  text-shadow: 4px 4px 8px #000000;
+}
+
+.skill-container {
+  max-width: 800px;
+}
+.skill-container p {
+  
+  font-size: 24px;
+}
+
+.skill {
+  background-color: #2c2c2c;
+  border-radius: 5px;
+  margin: 5px;
+}
 
 
 /*--------------------------------------------------------------
@@ -475,7 +618,7 @@ section,
   width: 100%;
   min-height: 70vh;
   display: flex;
-  align-items:end;
+  align-items: end;
 }
 
 @media (max-width: 1200px) {
@@ -486,7 +629,7 @@ section,
 
 
 .portfoliotitle .titlecard {
-  background-color:  rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.8);
 }
 
@@ -521,7 +664,7 @@ section,
 # Portfolio content
 --------------------------------------------------------------*/
 
-.portfoliocontent .container{
+.portfoliocontent .container {
   max-width: 1000px;
 }
 
@@ -529,7 +672,7 @@ section,
   font-size: 18px;
 }
 
-.portfoliocontent li{
+.portfoliocontent li {
   font-size: 18px;
 }
 
@@ -559,22 +702,37 @@ section,
   margin: auto;
 }
 
-.portfoliocontent .inline-l {
-  width: 80%;
+.portfoliocontent h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  position: relative;
 }
 
-.portfoliocontent .inline-m {
-  width: 50%;
+.portfoliocontent h4 {
+  margin-top: 40px;
 }
 
 .portfoliocontent .card {
   border-radius: 0px;
   background-color: #00000000;
+  border-style: none;
 }
+
 
 .portfoliocontent .card .card-img-top {
   border-radius: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.portfoliocontent .card .card-body {
+  margin-top: 2px;
+  padding-top: 2px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .portfoliocontent .card .card-text {
@@ -630,4 +788,28 @@ section,
   padding: 5px;
   border: none;
   filter: invert(1) brightness(0.8) !important;
+}
+
+.fade-text {
+  text-align: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-text h1 {
+  font-size: 90px;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px #000000;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.plusicon {
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  fill: var(--accent-color);
 }
